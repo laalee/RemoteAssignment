@@ -1,0 +1,8 @@
+// 1. Why does the instructor in the video create another view model named CurrentWeatherViewModel instead of using ​CurrentWeather​ itself ?
+
+/*
+因為有些data與view上面要顯示的格式不同, 而data的內容要保持原樣, 但是執行格式轉換也不是view controller的工作.
+例如humidity原本的資料型態是Double, 需要顯示成一個包含%的String.
+所以建立了一個CurrentWeatherViewModel, 將data的值轉換成要顯示的格式後儲存起來, 最後view controller只需要將內容拿來顯示, 不需要做其他額外的格式轉換.
+將data與model與view分開, 分別處理各自的工作.
+*/

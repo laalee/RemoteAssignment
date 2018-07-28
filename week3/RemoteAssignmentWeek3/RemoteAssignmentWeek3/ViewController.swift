@@ -16,17 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var checkLable: UILabel!
     
     var currentStatus: segmentStatus = .logIn
-
-    enum segmentStatus {
-        case logIn
-        case signUp
-    }
-    
-    enum errors: Error {
-        case emptyValue(description: String)
-        case logInFail(description: String)
-        case signUpFail(description: String)
-    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,4 +157,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
 }
+
+enum segmentStatus {
+    case logIn
+    case signUp
+}
+
+enum errors: Error {
+    case emptyValue(description: String)
+    case logInFail(description: String)
+    case signUpFail(description: String)
+}
+
+
 
